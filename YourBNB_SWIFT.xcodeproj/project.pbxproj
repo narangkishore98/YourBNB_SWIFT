@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3A06201A22B86A610087F2AE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06201922B86A610087F2AE /* main.swift */; };
 		3A06202122B86AC20087F2AE /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06202022B86AC20087F2AE /* Property.swift */; };
+		9B9FBEE422B86BA4008A28D8 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FBEE322B86BA4008A28D8 /* City.swift */; };
+		9B9FBEE622B86C61008A28D8 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FBEE522B86C61008A28D8 /* Display.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 		3A06201622B86A610087F2AE /* YourBNB_SWIFT */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = YourBNB_SWIFT; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A06201922B86A610087F2AE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3A06202022B86AC20087F2AE /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		9B9FBEE322B86BA4008A28D8 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		9B9FBEE522B86C61008A28D8 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,28 @@
 		3A06201822B86A610087F2AE /* YourBNB_SWIFT */ = {
 			isa = PBXGroup;
 			children = (
+				9B9FBEE922B86CC3008A28D8 /* Errors */,
+				9B9FBEE222B86B6F008A28D8 /* Utilities */,
 				3A06201922B86A610087F2AE /* main.swift */,
 				3A06202022B86AC20087F2AE /* Property.swift */,
 			);
 			path = YourBNB_SWIFT;
+			sourceTree = "<group>";
+		};
+		9B9FBEE222B86B6F008A28D8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9B9FBEE322B86BA4008A28D8 /* City.swift */,
+				9B9FBEE522B86C61008A28D8 /* Display.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9B9FBEE922B86CC3008A28D8 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +146,8 @@
 			files = (
 				3A06202122B86AC20087F2AE /* Property.swift in Sources */,
 				3A06201A22B86A610087F2AE /* main.swift in Sources */,
+				9B9FBEE622B86C61008A28D8 /* Display.swift in Sources */,
+				9B9FBEE422B86BA4008A28D8 /* City.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
