@@ -7,3 +7,7 @@
 //
 
 import Foundation
+class Property
+{
+    var propertyID:String //CXXX or OXXX
+}
