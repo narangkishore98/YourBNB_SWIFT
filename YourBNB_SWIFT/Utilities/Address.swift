@@ -8,8 +8,19 @@
 
 import Foundation
 
-struct Address
+struct Address: Display
 {
     
+    var city : City
+    var state : String
+    var aptNo : String
+    var aptName :  String
+    var pincode : String
+    var street : String
     
+    func display() -> String {
+        
+    }
+
 }
+
