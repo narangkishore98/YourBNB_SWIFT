@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Property
+class Property : Display
 {
     var propertyID:String //CXXX or OXXX
     var propertyName:String? //SkyView Manor if appartments not mandatory to give
@@ -29,4 +29,25 @@ class Property
         self.totalPrice = totalPrice
     
     }
+    func display() -> String {
+        var returner = "Property ID: \(self.propertyID)\n"
+        if let p_name = propertyName 
+        {
+            returner += "Property Name: \(p_name)\n"
+            
+        }
+        
+        returner += "Total Number of Rooms: \(self.totalRooms)\n" +
+        "Max People Allowed: \(self.maxPeopleAllowed)\n" +
+        "Price (Per Person):  \(self.pricePerPerson)\n" +
+        "Price (Total): \(self.totalPrice)\n" +
+        "Available: \( isAvailable ? "Yes":"No")\n" +
+        "Address: \(address.display())"
+        
+        return returner
+        
+    }
+    
 }
+
+

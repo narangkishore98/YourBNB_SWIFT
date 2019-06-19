@@ -8,5 +8,6 @@
 
 import Foundation
 
-
+var string:String! = "HELLO"
+print(string.uppercased())
 

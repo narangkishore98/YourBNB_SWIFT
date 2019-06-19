@@ -11,6 +11,5 @@ import Foundation
 struct Address
 {
     
-    var state : String
-    var suite : String
+    
 }
