@@ -7,6 +7,10 @@
 //
 
 import Foundation
+enum PropertyType
+{
+    case Apartment, Condominium, House, Basement
+}
 class Property : Display
 {
     var propertyID:String //CXXX or OXXX
@@ -17,11 +21,13 @@ class Property : Display
     var totalPrice:Float // price for the whole property
     var isAvailable:Bool // if the property is available for rent at the current time or not.
     var address:Address
-    init(propertyID:String, address:Address, totalRooms:Int , maxPeopleAllowed:Int, pricePerPerson:Float, totalPrice:Float, isAvailable:Bool )
+    var propertyType:PropertyType
+    init(propertyID:String, propertyType:PropertyType, address:Address, totalRooms:Int , maxPeopleAllowed:Int, pricePerPerson:Float, totalPrice:Float, isAvailable:Bool )
     
     {
         self.propertyID = propertyID
         self.address = address
+        self.propertyType = propertyType
         self.totalRooms = totalRooms
         self.maxPeopleAllowed = maxPeopleAllowed
         self.isAvailable = isAvailable
@@ -37,7 +43,8 @@ class Property : Display
             
         }
         
-        returner += "Total Number of Rooms: \(self.totalRooms)\n" +
+        returner += "Property Type: \(propertyType)\n" +
+        "Total Number of Rooms: \(self.totalRooms)\n" +
         "Max People Allowed: \(self.maxPeopleAllowed)\n" +
         "Price (Per Person):  \(self.pricePerPerson)\n" +
         "Price (Total): \(self.totalPrice)\n" +
