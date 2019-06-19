@@ -10,7 +10,11 @@ import Foundation
 
 struct Address
 {
-    
+    var city : City
     var state : String
-    var suite : String
+    var aptNo : String
+    var aptName :  String
+    var pincode : String
+    var street : String
+    
 }
