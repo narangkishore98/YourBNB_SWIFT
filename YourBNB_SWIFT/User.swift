@@ -18,4 +18,7 @@ struct User
     }
     var email : String // email@gmail.com
     var mobile:Int64
+    var isOwner:Bool=false
+    
+   
 }

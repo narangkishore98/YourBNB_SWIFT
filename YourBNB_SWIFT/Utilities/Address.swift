@@ -13,13 +13,12 @@ struct Address: Display
     
     var city : City
     var state : String
-    var aptNo : String
-    var aptName :  String
+    var aptNo : String?
     var pincode : String
     var street : String
     
     func display() -> String {
-        
+        return "\(aptNo ?? "")  \(street), \(city), \(state), CANADA - \(pincode)"
     }
 
 }

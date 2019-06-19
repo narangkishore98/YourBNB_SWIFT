@@ -35,6 +35,18 @@ class Property : Display
         self.totalPrice = totalPrice
     
     }
+    init(property:Property)
+    {
+        self.propertyType = property.propertyType
+        self.propertyID = property.propertyID
+        self.propertyName = property.propertyName
+        self.totalRooms = property.totalRooms
+        self.address = property.address
+        self.maxPeopleAllowed = property.maxPeopleAllowed
+        self.pricePerPerson = property.pricePerPerson
+        self.isAvailable = property.isAvailable
+        self.totalPrice = property.totalPrice
+    }
     func display() -> String {
         var returner = "Property ID: \(self.propertyID)\n"
         if let p_name = propertyName 
@@ -57,4 +69,16 @@ class Property : Display
     
 }
 
-
+class BookableProperty : Property
+{
+    var bookingDate:Date
+    var checkInDate:Date
+    var checkOutDate:Date
+    var promoApplied:Bool
+    var promo:Promo?
+    var pricePaid:Float
+    init(bookingDate:Date, checkInDate:Date, checkOutDate, promoApplied:bool, property:Property )
+    {
+        
+    }
+}
