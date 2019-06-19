@@ -77,8 +77,22 @@ class BookableProperty : Property
     var promoApplied:Bool
     var promo:Promo?
     var pricePaid:Float
-    init(bookingDate:Date, checkInDate:Date, checkOutDate, promoApplied:bool, property:Property )
+    init(bookingDate:Date, checkInDate:Date, checkOutDate:Date, promoApplied:Bool, property:Property )
     {
-        
+        self.bookingDate = bookingDate
+        self.checkInDate = checkInDate
+        self.checkOutDate = checkOutDate
+        self.promoApplied = promoApplied
+        self.pricePaid = promo?.getDiscountedPrice(price: property.totalPrice) ?? property.totalPrice
+        super.init(property: property)
+    }
+    override func display() -> String {
+        return super.display() +
+        "-------------Booking Details--------------\n" +
+        "Booking Date: \(bookingDate)\n" +
+        "Checkin Date: \(checkInDate)\n" +
+        "Checkout Date: \(checkOutDate)" +
+        "PromoCode Applied: \(promo?.promoCode ?? "None" )\n" +
+        "Price Paid (Per Day): \(pricePaid)"
     }
 }

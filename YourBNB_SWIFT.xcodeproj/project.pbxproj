@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E6AAAAE22B9C38500A8A64F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AAAAD22B9C38500A8A64F /* User.swift */; };
 		2E6AAAB022BA837F00A8A64F /* Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AAAAF22BA837F00A8A64F /* Promo.swift */; };
+		2E6AAAB222BAB45700A8A64F /* AuthorizationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AAAB122BAB45700A8A64F /* AuthorizationError.swift */; };
 		3A06201A22B86A610087F2AE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06201922B86A610087F2AE /* main.swift */; };
 		3A06202122B86AC20087F2AE /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06202022B86AC20087F2AE /* Property.swift */; };
 		9B9FBEE422B86BA4008A28D8 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FBEE322B86BA4008A28D8 /* City.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		2E6AAAAD22B9C38500A8A64F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E6AAAAF22BA837F00A8A64F /* Promo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promo.swift; sourceTree = "<group>"; };
+		2E6AAAB122BAB45700A8A64F /* AuthorizationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthorizationError.swift; path = YourBNB_SWIFT/AuthorizationError.swift; sourceTree = SOURCE_ROOT; };
 		3A06201622B86A610087F2AE /* YourBNB_SWIFT */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = YourBNB_SWIFT; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A06201922B86A610087F2AE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3A06202022B86AC20087F2AE /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		9B9FBEE922B86CC3008A28D8 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
+				2E6AAAB122BAB45700A8A64F /* AuthorizationError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				2E6AAAAE22B9C38500A8A64F /* User.swift in Sources */,
 				9B9FBEE622B86C61008A28D8 /* Display.swift in Sources */,
 				9B9FBEE422B86BA4008A28D8 /* City.swift in Sources */,
+				2E6AAAB222BAB45700A8A64F /* AuthorizationError.swift in Sources */,
 				9BDF7AC722B99AC60086C08F /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
