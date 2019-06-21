@@ -1,0 +1,20 @@
+[
+    {
+        "propertyID": "C901",
+        "propertyName": "Sky View Maynor Condominium",
+        "totalRooms":4
+        "maxPeopleAllowed": 6,
+        "pricePerPerson": 15,
+        "totalPrice":100.25,
+        "isAvailable":"true",
+        "address":
+        {
+            "city":"Toronto"
+            "state":"Ontario"
+            "aptNo":"1049"
+            "pincode":"M1E 4X2"
+            "street":"100"
+        }
+        "propertyType":"Condominium"
+    }
+]

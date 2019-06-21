@@ -1,129 +1,4 @@
-{
-    "users": [{
-        "userID": "O100",
-        "firstName": "Kishore",
-        "lastName": "Narang",
-        "gender": "M",
-        "email": "narangkishore98@gmail.com",
-        "mobile": "6477639826",
-        "password": "Hello@223",
-        "properties": [
-            [{
-                "propertyID": "C901",
-                "propertyName": "Sky View Maynor Condominium",
-                "fullAddress": "Suite 1049, 100 Mornelle Court, Scarborough, ON - M1E 4X2",
-                "maxPeopleAllowed": 6,
-                "perPersonPrice": 15,
-                "price": 65
-            },
-            {
-                "propertyID": "A901",
-                "propertyName": "Sheraton Centre Toronto Apartment",
-                "fullAddress": "123 Queen St W, Toronto, ON - M5H 2M9",
-                "maxPeopleAllowed": 3,
-                "perPersonPrice": 200,
-                "price": 600
-            },
-            {
-                "propertyID": "H901",
-                "propertyName": "Sham Villa",
-                "fullAddress": "65 Norn Crescent,Markham, ON - L3S 2A2",
-                "maxPeopleAllowed": 1,
-                "perPersonPrice": 13,
-                "price": 13
-            },
-            {
-                "propertyID": "H902",
-                "propertyName": "Bajwa House",
-                "fullAddress": "4 Blue Diamond Drive, Brampton, ON - L6S 6K2",
-                "maxPeopleAllowed": 2,
-                "perPersonPrice": 9,
-                "price": 15
-            }
-            ],
-            []
-        ]
-    },
-    {
-        "userID": "O101",
-        "firstName": "TarlochanPreet",
-        "lastName": "Singh",
-        "gender": "M",
-        "email": "tarlochan5268@gmail.com",
-        "mobile": "4164362548",
-        "password": "Hello@5268",
-        "properties": [
-            [{
-                "propertyID": "A902",
-                "propertyName": "Water Front Living Apartment",
-                "fullAddress": "2770 Aquitaine Avenue, Toronto, ON - L5N 3K5",
-                "maxPeopleAllowed": 2,
-                "perPersonPrice": 65,
-                "price": 80
-            },
-            {
-                "propertyID": "B901",
-                "propertyName": "Mc Lowan House",
-                "fullAddress": "2215 Bennington Gate, Toronto, ON - L6J 5Z4",
-                "maxPeopleAllowed": 4,
-                "perPersonPrice": 30,
-                "price": 100
-            }
-            ],
-            []
-        ]
-    },
-    {
-        "userID": "C102",
-        "firstName": "Nikhil",
-        "lastName": "Nikhil",
-        "gender": "M",
-        "email": "nikhil123@gmail.com",
-        "mobile": "4164362550",
-        "password": "Hello@123",
-        "properties": [
-            [],
-            [{
-                "propertyID": "C901",
-                "propertyName": "Sky View Maynor Condominium",
-                "fullAddress": "Suite 1049, 100 Mornelle Court, Scarborough, ON - M1E 4X2",
-                "maxPeopleAllowed": 6,
-                "perPersonPrice": 15,
-                "price": 65,
-                "bookingDate": "03/05/2019",
-                "checkinDate": "04/05/2019",
-                "checkoutDate": "05/05/2019"
-            },
-            {
-                "propertyID": "H901",
-                "propertyName": "Sham Villa",
-                "fullAddress": "65 Norn Crescent,Markham, ON - L3S 2A2",
-                "maxPeopleAllowed": 1,
-                "perPersonPrice": 13,
-                "price": 13,
-                "bookingDate": "16/04/2019",
-                "checkinDate": "19/04/2019",
-                "checkoutDate": "21/04/2019"
-            },
-            {
-                "propertyID": "B901",
-                "propertyName": "Mc Lowan House",
-                "fullAddress": "2215 Bennington Gate, Toronto, ON - L6J 5Z4",
-                "maxPeopleAllowed": 4,
-                "perPersonPrice": 30,
-                "price": 100,
-                "bookingDate": "20/11/2018",
-                "checkinDate": "23/11/2018",
-                "checkoutDate": "27/11/2018"
-            }
-            ]
-        ]
-    }
-    ]
-}
-
-
-{
+[{
     "userID": "O100",
     "firstName": "Kishore",
     "lastName": "Narang",
@@ -131,4 +6,58 @@
     "password": "Hello@223",
     "email": "narangkishore98@gmail.com",
     "mobile": "6477639826",
-}
+    "isOwner":"true"
+    "ownedProperties":
+    [
+        {
+            "propertyID": "C901",
+            "propertyName": "Sky View Maynor Condominium",
+            "totalRooms":4
+            "maxPeopleAllowed": 6,
+            "pricePerPerson": 15,
+            "totalPrice":100.25,
+            "isAvailable":"true",
+            "address":
+            {
+                "city":"Toronto"
+                "state":"Ontario"
+                "aptNo":"1049"
+                "pincode":"M1E 4X2"
+                "street":"100"
+            }
+            "propertyType":"Condominium"
+        }
+    ]
+    "bookedProperties":[]
+},
+{
+    "userID": "C100",
+    "firstName": "Tarlochanpreet",
+    "lastName": "Singh",
+    "gender": "M",
+    "password": "Hello@223",
+    "email": "tarlochan5268@gmail.com",
+    "mobile": "6477639006",
+    "isOwner":"false"
+    "ownedProperties":
+    []
+    "bookedProperties":
+    [
+        "propertyID": "C901",
+        "propertyName": "Sky View Maynor Condominium",
+        "totalRooms":4
+        "maxPeopleAllowed": 6,
+        "pricePerPerson": 15,
+        "totalPrice":100.25,
+        "isAvailable":"true",
+        "address":
+        {
+            "city":"Toronto"
+            "state":"Ontario"
+            "aptNo":"1049"
+            "pincode":"M1E 4X2"
+            "street":"100"
+        }
+        "propertyType":"Condominium"
+    ]
+}]
