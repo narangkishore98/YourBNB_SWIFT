@@ -6,16 +6,8 @@
     "password": "Hello@223",
     "email": "narangkishore98@gmail.com",
     "mobile": "6477639826",
-    "isOwner":"true"
-    "ownedProperties":
-    [
-        {
-            "propertyID": "C901"
-        },
-        {
-            "propertyID": "C901"
-        }
-    ]
+    "isOwner":"true",
+    "ownedProperties":["C901","C902"],
     "bookedProperties":
     []
 },
@@ -27,13 +19,12 @@
     "password": "Hello@223",
     "email": "tarlochan5268@gmail.com",
     "mobile": "6477639006",
-    "isOwner":"false"
-    "ownedProperties":
-    []
+    "isOwner":"false",
+    "ownedProperties":[],
     "bookedProperties":
     [
         {
-            "propertyID":"C901"
+            "propertyID":"C901",
             "bookingDate": "20/11/2018",
             "checkinDate": "23/11/2018",
             "checkoutDate": "27/11/2018"
