@@ -39,7 +39,6 @@
 		9B9FBEE322B86BA4008A28D8 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		9B9FBEE522B86C61008A28D8 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		9BDF7AC622B99AC60086C08F /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
-		9BF8D98222B86F8900875A7A /* json.data */ = {isa = PBXFileReference; lastKnownFileType = text; path = json.data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +75,6 @@
 				9B9FBEE222B86B6F008A28D8 /* Utilities */,
 				3A06201922B86A610087F2AE /* main.swift */,
 				3A06202022B86AC20087F2AE /* Property.swift */,
-				9BF8D98222B86F8900875A7A /* json.data */,
 				2E6AAAAD22B9C38500A8A64F /* User.swift */,
 				2E6AAAAF22BA837F00A8A64F /* Promo.swift */,
 			);
