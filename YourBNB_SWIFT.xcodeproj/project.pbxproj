@@ -36,6 +36,7 @@
 		3A06201622B86A610087F2AE /* YourBNB_SWIFT */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = YourBNB_SWIFT; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A06201922B86A610087F2AE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3A06202022B86AC20087F2AE /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		84A1A6F122BD8F1E00828EE2 /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		9B9FBEE322B86BA4008A28D8 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		9B9FBEE522B86C61008A28D8 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		9BDF7AC622B99AC60086C08F /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 				3A06202022B86AC20087F2AE /* Property.swift */,
 				2E6AAAAD22B9C38500A8A64F /* User.swift */,
 				2E6AAAAF22BA837F00A8A64F /* Promo.swift */,
+				84A1A6F122BD8F1E00828EE2 /* users.json */,
 			);
 			path = YourBNB_SWIFT;
 			sourceTree = "<group>";
