@@ -10,25 +10,14 @@
     "ownedProperties":
     [
         {
-            "propertyID": "C901",
-            "propertyName": "Sky View Maynor Condominium",
-            "totalRooms":4
-            "maxPeopleAllowed": 6,
-            "pricePerPerson": 15,
-            "totalPrice":100.25,
-            "isAvailable":"true",
-            "address":
-            {
-                "city":"Toronto"
-                "state":"Ontario"
-                "aptNo":"1049"
-                "pincode":"M1E 4X2"
-                "street":"100"
-            }
-            "propertyType":"Condominium"
+            "propertyID": "C901"
+        },
+        {
+            "propertyID": "C901"
         }
     ]
-    "bookedProperties":[]
+    "bookedProperties":
+    []
 },
 {
     "userID": "C100",
@@ -43,21 +32,11 @@
     []
     "bookedProperties":
     [
-        "propertyID": "C901",
-        "propertyName": "Sky View Maynor Condominium",
-        "totalRooms":4
-        "maxPeopleAllowed": 6,
-        "pricePerPerson": 15,
-        "totalPrice":100.25,
-        "isAvailable":"true",
-        "address":
         {
-            "city":"Toronto"
-            "state":"Ontario"
-            "aptNo":"1049"
-            "pincode":"M1E 4X2"
-            "street":"100"
+            "propertyID":"C901"
+            "bookingDate": "20/11/2018",
+            "checkinDate": "23/11/2018",
+            "checkoutDate": "27/11/2018"
         }
-        "propertyType":"Condominium"
     ]
 }]
