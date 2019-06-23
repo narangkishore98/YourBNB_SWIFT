@@ -12,6 +12,19 @@
     []
 },
 {
+    "userID": "O101",
+    "firstName": "Nikhil",
+    "lastName": "Nikhil",
+    "gender": "M",
+    "password": "Hello@003",
+    "email": "nikhilthakur050@gmail.com",
+    "mobile": "6477777826",
+    "isOwner":"true",
+    "ownedProperties":["C903","C904"],
+    "bookedProperties":
+    []
+},
+{
     "userID": "C100",
     "firstName": "Tarlochanpreet",
     "lastName": "Singh",
