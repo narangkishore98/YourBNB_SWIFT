@@ -13,13 +13,15 @@ enum Gender
     case Male,Female,Other
 }
 
-struct User
+struct User : Display
 {
+    static var userIDGenerator = 1
     var userID:String // CXXX or OXXX depending upon user type
     var firstName:String //First Name
     var lastName:String // Last Name
     var gender : Gender
     var password:String
+    var importUser:Bool = false
     var fullName:String{
         return firstName + "  " + lastName
     }
@@ -41,6 +43,11 @@ struct User
         self.email = email
         self.mobile = mobile
         self.password = password
+        if !importUser
+        {
+            self.userID = "C"+"\(User.userIDGenerator)".padding(toLength: 4, withPad: "0", startingAt:0)
+            User.userIDGenerator += 1
+        }
     }
     mutating func addOwnedProperty(property:Property) throws
     {
@@ -51,5 +58,14 @@ struct User
         _ownedProperties.append(property)
     }
     
+    
+    func display() -> String {
+        return "User ID: \(userID)\n" +
+        "Name: \(fullName)\n" +
+        "Email: \(email)\n" +
+        "Mobile: \(mobile)\n" +
+        "Gender: \(gender)\n" +
+        "User Type: \(isOwner ? "Owner" : "Customer")"
+    }
    
 }

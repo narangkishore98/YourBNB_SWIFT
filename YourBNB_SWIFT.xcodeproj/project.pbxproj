@@ -11,6 +11,7 @@
 		2E4D962B22BEE4EC000E2156 /* property.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A1A6F222BD928F00828EE2 /* property.json */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2E4D962C22BEED50000E2156 /* users.json in Sources */ = {isa = PBXBuildFile; fileRef = 84A1A6F122BD8F1E00828EE2 /* users.json */; };
 		2E4D962D22BEED50000E2156 /* property.json in Sources */ = {isa = PBXBuildFile; fileRef = 84A1A6F222BD928F00828EE2 /* property.json */; };
+		2E4D962F22BF1287000E2156 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4D962E22BF1287000E2156 /* Extensions.swift */; };
 		2E6AAAAE22B9C38500A8A64F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AAAAD22B9C38500A8A64F /* User.swift */; };
 		2E6AAAB022BA837F00A8A64F /* Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AAAAF22BA837F00A8A64F /* Promo.swift */; };
 		2E6AAAB222BAB45700A8A64F /* AuthorizationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AAAB122BAB45700A8A64F /* AuthorizationError.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E4D962E22BF1287000E2156 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2E6AAAAD22B9C38500A8A64F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E6AAAAF22BA837F00A8A64F /* Promo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promo.swift; sourceTree = "<group>"; };
 		2E6AAAB122BAB45700A8A64F /* AuthorizationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthorizationError.swift; path = YourBNB_SWIFT/AuthorizationError.swift; sourceTree = SOURCE_ROOT; };
@@ -100,6 +102,7 @@
 				9B9FBEE322B86BA4008A28D8 /* City.swift */,
 				9B9FBEE522B86C61008A28D8 /* Display.swift */,
 				9BDF7AC622B99AC60086C08F /* Address.swift */,
+				2E4D962E22BF1287000E2156 /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				3A06201A22B86A610087F2AE /* main.swift in Sources */,
 				2E6AAAAE22B9C38500A8A64F /* User.swift in Sources */,
 				9B9FBEE622B86C61008A28D8 /* Display.swift in Sources */,
+				2E4D962F22BF1287000E2156 /* Extensions.swift in Sources */,
 				9B9FBEE422B86BA4008A28D8 /* City.swift in Sources */,
 				2E6AAAB222BAB45700A8A64F /* AuthorizationError.swift in Sources */,
 				CEB63BF022BDA7EF00D9C3A3 /* DataStore.swift in Sources */,

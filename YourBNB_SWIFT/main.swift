@@ -42,38 +42,57 @@ mainloop: while true
         {
             print("No Users Availabe. Please try users adding first. Thanks.")
         }
-        print("------------------------------------------------------")
-        for user in users
+        else
         {
-            print("User Details ----------------------> ")
-            //user.display() // not made yet.
+            print("------------------------------------------------------")
+            for user in users
+            {
+                print("User Details ----------------------> ")
+                print(user.display())
+            }
+            print("------------------------------------------------------")
         }
-        print("------------------------------------------------------")
     case "3":
+        
         print("3. Add User -> -> -> ")
         print("Please Provide Your Personal Details: ")
-        print("Please Enter Your First Name: ")
+        print("Please Enter Your First Name: ", terminator:"")
         let userFirstName = readLine()!
-        print("Please Enter Your Last Name: ")
-        let userLastName = readLine()
-        print("Please Select Your Gender (M/F/O): ")
-        var userGender = readLine()!
+        print("Please Enter Your Last Name: ", terminator:"")
+        let userLastName = readLine()!
+        print("Please Select Your Gender (M/F/O): ", terminator:"")
+        let userGender = readLine()!
+        var tempGender:Gender = Gender.Other
         genderloop: while true
         {
             switch userGender
             {
-            case "M":
-                userGender = Gender.Male
-            }
-            case "F":
-            {
-                userGender = Gender.Female
-            }
-            case "O":
-            {
+                case "M":
+                    tempGender = Gender.Male
+                    break genderloop
+                case "F":
+                    tempGender = Gender.Female as Gender
+                    break genderloop
+            
+                case "O":
+                    tempGender = Gender.Other as Gender
+                    break genderloop
+                default:
+                    print("The Gender Initial Was Invalid Try Again with options M: Male, F: Female, O: Others")
             
             }
         }
+        print("Please Enter The Email ID: ", terminator:"")
+        let email = readLine()!
+        print("Please Enter The Mobile Number: ", terminator:"")
+        let mobile = Int64(readLine()!)!
+        print("Please Enter Your Password", terminator:"")
+        let password = readLine()!
+        let user:User = User(userID: "XXX Fill Aything if you want to add user by your own. you will have to set the importUser = true if you want this from json", firstName: userFirstName, lastName: userLastName, gender: tempGender, email: email, mobile: mobile, password: password)
+        users.append(user)
+        
+        
+        
     default:
         print("This Input Was Invalid Please try agian with the valid input: \"\(firstInput)\"")
     }
