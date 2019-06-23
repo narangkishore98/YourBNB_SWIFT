@@ -16,5 +16,59 @@
             "street":"100",
         },
         "propertyType":"Condominium"
+    },
+    {
+        "propertyID": "H901",
+        "propertyName": "Bajwa House",
+        "totalRooms":2,
+        "maxPeopleAllowed": 2,
+        "pricePerPerson": 15,
+        "totalPrice":45.15,
+        "isAvailable":"true",
+        "address":
+        {
+            "city":"Markham",
+            "state":"Ontario",
+            "aptNo":"4",
+            "pincode":"L6S 6K2",
+            "street":"19",
+        },
+        "propertyType":"House"
+    },
+    {
+        "propertyID": "B901",
+        "propertyName": "Sham Villa",
+        "totalRooms":1,
+        "maxPeopleAllowed": 1,
+        "pricePerPerson": 3,
+        "totalPrice":3,
+        "isAvailable":"true",
+        "address":
+        {
+            "city":"Scarborough",
+            "state":"Ontario",
+            "aptNo":"65",
+            "pincode":"M5H 2M9",
+            "street":"Norn Cresent",
+        },
+        "propertyType":"Basement"
+    },
+    {
+        "propertyID": "A901",
+        "propertyName": "Sheraton Center",
+        "totalRooms":4,
+        "maxPeopleAllowed": 6,
+        "pricePerPerson": 200,
+        "totalPrice":600,
+        "isAvailable":"true",
+        "address":
+        {
+            "city":"Toronto",
+            "state":"Ontario",
+            "aptNo":"123",
+            "pincode":"M1E 6Z2",
+            "street":"100",
+        },
+        "propertyType":"Apartment"
     }
 ]

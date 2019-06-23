@@ -8,7 +8,7 @@
 
 import Foundation
 
-var u:User = User(userID:"C019", firstName:  "Kishore" , lastName:"Narang", email:"narangkishore98@gmail.com", mobile: 6477639826, password:"Hello@123" )
+var u:User = User(userID:"C019", firstName:  "Kishore" , lastName:"Narang", gender: Gender.Male, email:"narangkishore98@gmail.com", mobile: 6477639826, password:"Hello@123" )
 var adr:Address = Address(city: City.Toronto, state: "Ontario", aptNo:nil, pincode:
     "m1e 4x2", street: "100 Mornelle Court")
 
