@@ -8,11 +8,75 @@
 
 import Foundation
 
-var u:User = User(userID:"C019", firstName:  "Kishore" , lastName:"Narang", email:"narangkishore98@gmail.com", mobile: 6477639826, password:"Hello@123" )
-var adr:Address = Address(city: City.Toronto, state: "Ontario", aptNo:nil, pincode:
-    "m1e 4x2", street: "100 Mornelle Court")
 
-var p:Property = Property(propertyID: "A9090", propertyType: PropertyType.Basement, address: adr, totalRooms: 4, maxPeopleAllowed: 8, pricePerPerson: 20, totalPrice: 160, isAvailable: true)
+var users = Array<User>()
 
-try! u.addOwnedProperty(property: p)
+print("--------------------> Welcome To Your BNB <--------------------")
+print("Note: Choose The Options Below to Cancel anytime just type \"exit\"\nThis is the command line utility for the project YourBNB_Swift availabale at https://www.github.com/narangkishore98/YourBNB_Swift")
 
+
+mainloop: while true
+{
+    print("\n\n--------------------------------------")
+    print("1. View Users")
+    print("2. View Properties")
+    print("3. Add User")
+    print("4. Add Property")
+    print("5. Book A Property")
+    print("6. Show Future Bookings")
+    print("7. Show Past Bookings")
+    print("8. Read Data From JSON")
+    print("9. Save Data To JSON")
+    print("\n\nPlease Enter Your Choice: ", terminator: "")
+    let firstInput = readLine()!
+    
+    print("Thanks For Responding with option \(firstInput)")
+
+    switch firstInput
+    {
+    case "exit":
+        break mainloop
+    case "1":
+        print("1. View Users -> -> -> ")
+        if users.count == 0
+        {
+            print("No Users Availabe. Please try users adding first. Thanks.")
+        }
+        print("------------------------------------------------------")
+        for user in users
+        {
+            print("User Details ----------------------> ")
+            //user.display() // not made yet.
+        }
+        print("------------------------------------------------------")
+    case "3":
+        print("3. Add User -> -> -> ")
+        print("Please Provide Your Personal Details: ")
+        print("Please Enter Your First Name: ")
+        let userFirstName = readLine()!
+        print("Please Enter Your Last Name: ")
+        let userLastName = readLine()
+        print("Please Select Your Gender (M/F/O): ")
+        var userGender = readLine()!
+        genderloop: while true
+        {
+            switch userGender
+            {
+            case "M":
+                userGender = Gender.Male
+            }
+            case "F":
+            {
+                userGender = Gender.Female
+            }
+            case "O":
+            {
+            
+            }
+        }
+    default:
+        print("This Input Was Invalid Please try agian with the valid input: \"\(firstInput)\"")
+    }
+}
+
+print("Finished")

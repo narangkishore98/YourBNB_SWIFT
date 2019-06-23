@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E4D962A22BEE31E000E2156 /* users.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A1A6F122BD8F1E00828EE2 /* users.json */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2E4D962B22BEE4EC000E2156 /* property.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A1A6F222BD928F00828EE2 /* property.json */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2E4D962C22BEED50000E2156 /* users.json in Sources */ = {isa = PBXBuildFile; fileRef = 84A1A6F122BD8F1E00828EE2 /* users.json */; };
+		2E4D962D22BEED50000E2156 /* property.json in Sources */ = {isa = PBXBuildFile; fileRef = 84A1A6F222BD928F00828EE2 /* property.json */; };
 		2E6AAAAE22B9C38500A8A64F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AAAAD22B9C38500A8A64F /* User.swift */; };
 		2E6AAAB022BA837F00A8A64F /* Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AAAAF22BA837F00A8A64F /* Promo.swift */; };
 		2E6AAAB222BAB45700A8A64F /* AuthorizationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AAAB122BAB45700A8A64F /* AuthorizationError.swift */; };
@@ -21,10 +25,12 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		3A06201422B86A610087F2AE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 8;
+			dstPath = /Users/narangkishore98/Documents/YourBNB_SWIFT/YourBNB_Swift;
 			dstSubfolderSpec = 0;
 			files = (
+				2E4D962B22BEE4EC000E2156 /* property.json in CopyFiles */,
+				2E4D962A22BEE31E000E2156 /* users.json in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -132,6 +138,9 @@
 		3A06200E22B86A610087F2AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Bikloo;
@@ -163,6 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E4D962C22BEED50000E2156 /* users.json in Sources */,
+				2E4D962D22BEED50000E2156 /* property.json in Sources */,
 				3A06202122B86AC20087F2AE /* Property.swift in Sources */,
 				2E6AAAB022BA837F00A8A64F /* Promo.swift in Sources */,
 				3A06201A22B86A610087F2AE /* main.swift in Sources */,

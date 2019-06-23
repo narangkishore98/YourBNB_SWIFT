@@ -12,8 +12,23 @@ class DataStore
     static func readUsersFromJSON(fileName:String) -> [User]
     {
         let url = Bundle.main.url(forResource: fileName, withExtension: "json")
-        guard let jsonData = url else { }
-        guard let data = Data(contentsOf: jsonData) else {}
+        
+        guard let jsonData = url else{
+            print("url is nil")
+            return Array()
+        }
+        
+        guard let data = try? Data(contentsOf: jsonData) else {
+            print("cannot convert the data")
+            return Array()
+        }
+     
+        guard let json = try? JSONSerialization.jsonObject(with: data, options: [])else{ return Array<User>() }
+        
+        print(json)
+        
+        
+        
         
         
         return Array<User>()
