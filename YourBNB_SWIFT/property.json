@@ -6,7 +6,7 @@
         "maxPeopleAllowed": 6,
         "pricePerPerson": 15,
         "totalPrice":100.25,
-        "isAvailable":"true",
+        "isAvailable":true,
         "address":
         {
             "city":"Toronto",
@@ -24,7 +24,7 @@
         "maxPeopleAllowed": 2,
         "pricePerPerson": 15,
         "totalPrice":45.15,
-        "isAvailable":"true",
+        "isAvailable":true,
         "address":
         {
             "city":"Markham",
@@ -42,7 +42,7 @@
         "maxPeopleAllowed": 1,
         "pricePerPerson": 3,
         "totalPrice":3,
-        "isAvailable":"true",
+        "isAvailable":true,
         "address":
         {
             "city":"Scarborough",
@@ -60,7 +60,7 @@
         "maxPeopleAllowed": 6,
         "pricePerPerson": 200,
         "totalPrice":600,
-        "isAvailable":"true",
+        "isAvailable":true,
         "address":
         {
             "city":"Toronto",

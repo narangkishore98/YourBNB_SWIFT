@@ -175,25 +175,25 @@ class DataStore
                         //print(propertyName)
                         property.propertyName = propertyName
                     }
-                    if let totalRooms = jsonDictionay["totalRooms"] as? String
+                    if let totalRooms = jsonDictionay["totalRooms"] as? Int
                     {
                         //print(totalRooms)
-                        property.totalRooms = Int(totalRooms)!
+                        property.totalRooms = totalRooms
                     }
-                    if let maxPeopleAllowed = jsonDictionay["maxPeopleAllowed"] as? String
+                    if let maxPeopleAllowed = jsonDictionay["maxPeopleAllowed"] as? Int
                     {
                         //print(maxPeopleAllowed)
-                        property.maxPeopleAllowed = Int(maxPeopleAllowed)!
+                        property.maxPeopleAllowed = maxPeopleAllowed
                     }
-                    if let pricePerPerson = jsonDictionay["pricePerPerson"] as? String
+                    if let pricePerPerson = jsonDictionay["pricePerPerson"] as? Float
                     {
                         //print(pricePerPerson)
-                        property.pricePerPerson = Float(pricePerPerson)!
+                        property.pricePerPerson = pricePerPerson
                     }
-                    if let totalPrice = jsonDictionay["totalPrice"] as? String
+                    if let totalPrice = jsonDictionay["totalPrice"] as? Float
                     {
                         //print(totalPrice)
-                        property.totalPrice = Float(totalPrice)!
+                        property.totalPrice = totalPrice
                     }
                     if let isAvailable = jsonDictionay["isAvailable"] as? Bool
                     {
