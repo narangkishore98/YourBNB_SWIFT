@@ -20,6 +20,15 @@ struct Address: Display
     func display() -> String {
         return "\(aptNo ?? "")  \(street), \(city), \(state), CANADA - \(pincode)"
     }
+    
+    init()
+    {
+        self.city = City.Toronto
+        self.state = ""
+        self.aptNo = ""
+        self.pincode =  ""
+        self.street = ""
+    }
 
 }
 
