@@ -10,8 +10,8 @@ import Foundation
 
 
 
-DataStore.readUsersFromJSON(fileName: "property")
-
+//DataStore.readUsersFromJSON(fileName: "users")
+//DataStore.readPropertiesFromJSON(fileName: "property")
 
 print("--------------------> Welcome To Your BNB <--------------------")
 print("Note: Choose The Options Below to Cancel anytime just type \"exit\"\nThis is the command line utility for the project YourBNB_Swift availabale at https://www.github.com/narangkishore98/YourBNB_Swift")
