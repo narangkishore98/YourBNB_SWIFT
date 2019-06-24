@@ -12,11 +12,24 @@
     []
 },
 {
+    "userID": "O101",
+    "firstName": "Nikhil",
+    "lastName": "Nikhil",
+    "gender": "M",
+    "password": "Hello@003",
+    "email": "nikhilthakur050@gmail.com",
+    "mobile": "6477777826",
+    "isOwner":"true",
+    "ownedProperties":["C903","C904"],
+    "bookedProperties":
+    []
+},
+{
     "userID": "C100",
     "firstName": "Tarlochanpreet",
     "lastName": "Singh",
     "gender": "M",
-    "password": "Hello@223",
+    "password": "Hello@000",
     "email": "tarlochan5268@gmail.com",
     "mobile": "6477639006",
     "isOwner":"false",
@@ -28,6 +41,26 @@
             "bookingDate": "20/11/2018",
             "checkinDate": "23/11/2018",
             "checkoutDate": "27/11/2018"
+        }
+    ]
+},
+{
+    "userID": "C101",
+    "firstName": "Ajay",
+    "lastName": "Sharma",
+    "gender": "M",
+    "password": "Myself@223",
+    "email": "ajay68@gmail.com",
+    "mobile": "6477454006",
+    "isOwner":"false",
+    "ownedProperties":[],
+    "bookedProperties":
+    [
+        {
+            "propertyID":"C904",
+            "bookingDate": "21/06/2019",
+            "checkinDate": "23/06/2019",
+            "checkoutDate": "25/06/2019"
         }
     ]
 }]
