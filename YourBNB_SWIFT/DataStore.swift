@@ -141,6 +141,7 @@ class DataStore
                     }
                 }
                 //print(" ")
+                users.append(user)
             }
             //print(" ")
             
@@ -148,6 +149,7 @@ class DataStore
         //return Array<User>()
     }
     
+   
     static func readPropertiesFromJSON(fileName:String)
     {
         let url = Bundle.main.url(forResource: fileName, withExtension: "json")
@@ -155,13 +157,93 @@ class DataStore
         guard let data = try? Data(contentsOf: jsonData) else { return }
         guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
         
-        
+        if let jsonArray = json as? [Any]
+        {
+            var property: Property!
+            for propertyObject in jsonArray
+            {
+                property = Property()
+                if let jsonDictionay =  propertyObject as? [String: Any]
+                {
+                    if let propertyID = jsonDictionay["propertyID"] as? String
+                    {
+                        print(propertyID)
+                        property.propertyID = propertyID
+                    }
+                    if let propertyName = jsonDictionay["propertyName"] as? String
+                    {
+                        print(propertyName)
+                        property.propertyName = propertyName
+                    }
+                    if let totalRooms = jsonDictionay["totalRooms"] as? String
+                    {
+                        print(totalRooms)
+                        property.totalRooms = Int(totalRooms)!
+                    }
+                    if let maxPeopleAllowed = jsonDictionay["maxPeopleAllowed"] as? String
+                    {
+                        print(maxPeopleAllowed)
+                        property.maxPeopleAllowed = Int(maxPeopleAllowed)!
+                    }
+                    if let pricePerPerson = jsonDictionay["pricePerPerson"] as? String
+                    {
+                        print(pricePerPerson)
+                        property.pricePerPerson = Float(pricePerPerson)!
+                    }
+                    if let totalPrice = jsonDictionay["totalPrice"] as? String
+                    {
+                        print(totalPrice)
+                        property.totalPrice = Float(totalPrice)!
+                    }
+                    if let isAvailable = jsonDictionay["isAvailable"] as? Bool
+                    {
+                        print(isAvailable)
+                        property.isAvailable = isAvailable
+                    }
+                    if let propertyType = jsonDictionay["propertyType"] as? PropertyType
+                    {
+                        print(propertyType)
+                        property.propertyType = propertyType
+                    }
+                    var address: Address
+                    if let addressDict = jsonDictionay["address"] as? Dictionary<String, Any>
+                    {
+                        address = Address()
+                        if let city = addressDict["city"] as? City
+                        {
+                            print(city)
+                            address.city = city
+                        }
+                        if let state = addressDict["state"] as? String
+                        {
+                            print(state)
+                            address.state = state
+                        }
+                        if let aptNo = addressDict["aptNo"] as? String
+                        {
+                            print(aptNo)
+                            address.aptNo = aptNo
+                        }
+                        if let pincode = addressDict["pincode"] as? String
+                        {
+                            print(pincode)
+                            address.pincode = pincode
+                        }
+                        if let street = addressDict["street"] as? String
+                        {
+                            print(street)
+                            address.street = street
+                        }
+                    property.address = address
+                    }
+                }
+                properties.append(property)
+                
+            }
+        }
         
     }
-    func readPropertiesFromJSON(fileName:String)
-    {
-        
-    }
+    
     static func getUser(userID:String) -> User?
     {
         for user in users

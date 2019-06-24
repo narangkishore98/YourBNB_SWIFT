@@ -25,6 +25,7 @@ class Property : Display
     var address:Address
     var importProperty:Bool = false
     var propertyType:PropertyType
+    
     init(propertyID:String, propertyType:PropertyType, address:Address, totalRooms:Int , maxPeopleAllowed:Int, pricePerPerson:Float, totalPrice:Float, isAvailable:Bool )
     
     {
@@ -43,6 +44,7 @@ class Property : Display
         }
     
     }
+    
     init(property:Property)
     {
         self.propertyType = property.propertyType
@@ -54,6 +56,18 @@ class Property : Display
         self.pricePerPerson = property.pricePerPerson
         self.isAvailable = property.isAvailable
         self.totalPrice = property.totalPrice
+    }
+    init()
+    {
+        self.propertyID = ""
+        self.propertyName = ""
+        self.totalRooms = 0
+        self.propertyType = PropertyType.Apartment
+        self.maxPeopleAllowed = 0
+        self.isAvailable = false
+        self.pricePerPerson = 0
+        self.totalPrice = 0
+        self.address = Address()
     }
     func display() -> String {
         var returner = "Property ID: \(self.propertyID)\n"
