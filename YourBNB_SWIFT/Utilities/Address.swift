@@ -29,6 +29,14 @@ struct Address: Display
         self.pincode =  ""
         self.street = ""
     }
+    init(city: City, state: String, aptNo: String?, pincode: String, street: String)
+    {
+        self.city = city
+        self.state = state
+        self.aptNo = aptNo ?? ""
+        self.pincode = pincode
+        self.street = street
+    }
 
 }
 
