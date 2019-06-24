@@ -80,6 +80,18 @@ class DataStore
                     if let email = jsonDictionay["email"] as? String
                     {
                         //print(email)
+                        do
+                        {
+                            if(!isValidEmail(testStr: email))
+                            {
+                                throw AuthorizationError.invalidEmailError
+                            }
+                        }
+                        catch
+                        {
+                            print("While Reading From JSON: Email Error Found - Email Not Valid \(email) set to default - User Not Created")
+                            continue
+                        }
                         user.email = email
                     }
                     if let mobile = jsonDictionay["mobile"] as? String

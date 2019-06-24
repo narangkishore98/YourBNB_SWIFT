@@ -100,6 +100,10 @@ mainloop: while true
         }
         print("Please Enter The Email ID: ", terminator:"")
         let email = readLine()!
+        if(!DataStore.isValidEmail(testStr: email))
+        {
+            throw AuthorizationError.invalidEmailError
+        }
         print("Please Enter The Mobile Number: ", terminator:"")
         let mobile = Int64(readLine()!)!
         print("Please Enter Your Password: ", terminator:"")
