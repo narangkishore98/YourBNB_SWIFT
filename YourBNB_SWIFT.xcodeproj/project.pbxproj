@@ -12,6 +12,8 @@
 		2E6AAAB222BAB45700A8A64F /* AuthorizationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AAAB122BAB45700A8A64F /* AuthorizationError.swift */; };
 		3A06201A22B86A610087F2AE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06201922B86A610087F2AE /* main.swift */; };
 		3A06202122B86AC20087F2AE /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06202022B86AC20087F2AE /* Property.swift */; };
+		84783F7222C1300800A7A05E /* users.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A1A6F122BD8F1E00828EE2 /* users.json */; };
+		84783F7322C1300C00A7A05E /* property.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A1A6F222BD928F00828EE2 /* property.json */; };
 		9B9FBEE422B86BA4008A28D8 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FBEE322B86BA4008A28D8 /* City.swift */; };
 		9B9FBEE622B86C61008A28D8 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FBEE522B86C61008A28D8 /* Display.swift */; };
 		9BDF7AC722B99AC60086C08F /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF7AC622B99AC60086C08F /* Address.swift */; };
@@ -27,6 +29,17 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		84783F7122C12FFD00A7A05E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				84783F7322C1300C00A7A05E /* property.json in CopyFiles */,
+				84783F7222C1300800A7A05E /* users.json in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -116,6 +129,7 @@
 				3A06201222B86A610087F2AE /* Sources */,
 				3A06201322B86A610087F2AE /* Frameworks */,
 				3A06201422B86A610087F2AE /* CopyFiles */,
+				84783F7122C12FFD00A7A05E /* CopyFiles */,
 			);
 			buildRules = (
 			);

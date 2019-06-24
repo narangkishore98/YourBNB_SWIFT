@@ -14,5 +14,5 @@ var adr:Address = Address(city: City.Toronto, state: "Ontario", aptNo:nil, pinco
 
 var p:Property = Property(propertyID: "A9090", propertyType: PropertyType.Basement, address: adr, totalRooms: 4, maxPeopleAllowed: 8, pricePerPerson: 20, totalPrice: 160, isAvailable: true)
 
-try! u.addOwnedProperty(property: p)
-
+//try! u.addOwnedProperty(property: p)
+DataStore.readUsersFromJSON(fileName: "users")
