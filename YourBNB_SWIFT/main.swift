@@ -338,7 +338,7 @@ mainloop: while true
                 if var user = DataStore.getUser(userID: readLine()!)
                 {
                     user.isOwner = true
-                    
+                     
                     print("User set to owner")
                     
                 }
