@@ -338,7 +338,7 @@ mainloop: while true
                 if var user = DataStore.getUser(userID: readLine()!)
                 {
                     user.isOwner = true
-                    
+                     
                     print("User set to owner")
                     
                 }
@@ -353,7 +353,7 @@ mainloop: while true
     }
     
 }
-
+print(DataStore.properties)
 print("Thanks for using the command line utility of YourBNB_SWIFT")
 
 
