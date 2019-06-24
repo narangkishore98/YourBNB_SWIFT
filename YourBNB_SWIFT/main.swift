@@ -330,6 +330,10 @@ mainloop: while true
     case "6":
         DataStore.readPropertiesFromJSON(fileName: "property")
         DataStore.readUsersFromJSON(fileName: "users")
+        DataStore.users.sort(by: {
+            return $0.userID < $1.userID
+        })
+        
     case "7":
         print("Welcome To Admin Panel")
   

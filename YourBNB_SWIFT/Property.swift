@@ -80,8 +80,8 @@ class Property : Display
         returner += "Property Type: \(propertyType)\n" +
         "Total Number of Rooms: \(self.totalRooms)\n" +
         "Max People Allowed: \(self.maxPeopleAllowed)\n" +
-        "Price (Per Person):  \(self.pricePerPerson)\n" +
-        "Price (Total): \(self.totalPrice)\n" +
+        "Price (Per Person):  \(self.pricePerPerson.currency())\n" +
+        "Price (Total): \(self.totalPrice.currency())\n" +
         "Available: \( isAvailable ? "Yes":"No")\n" +
         "Address: \(address.display())"
         
@@ -121,6 +121,6 @@ class BookableProperty : Property
         "Checkin Date: \(checkInDate)\n" +
         "Checkout Date: \(checkOutDate)" +
         "PromoCode Applied: \(promo?.promoCode ?? "None" )\n" +
-        "Price Paid (Per Day): \(pricePaid)"
+        "Price Paid (Per Day): \(pricePaid.currency())"
     }
 }
