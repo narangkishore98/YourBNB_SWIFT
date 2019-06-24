@@ -39,14 +39,14 @@ mainloop: while true
         break mainloop
     case "1":
         print("1. View Users -> -> -> ")
-        if users.count == 0
+        if DataStore.users.count == 0
         {
             print("No Users Availabe. Please try users adding first. Thanks.")
         }
         else
         {
             print("------------------------------------------------------")
-            for user in users
+            for user in DataStore.users
             {
                 print("User Details ----------------------> ")
                 print(user.display())
@@ -55,14 +55,14 @@ mainloop: while true
         }
     case "2":
         print("2. View Properties -> -> ->")
-        if properties.count == 0
+        if DataStore.properties.count == 0
         {
             print("No Properties Available. Please Try adding properties first. Thanks")
         }
         else
         {
             print("------------------------------------------------------")
-            for property in properties
+            for property in DataStore.properties
             {
                 print("Property Details ----------------------> ")
                 print(property.display())
@@ -126,11 +126,71 @@ mainloop: while true
                         print("Please Enter the Property Name: ", terminator:"")
                         let propertyName = readLine()!
                         print("Please Enter Room Count: ", terminator:"")
-                        let roomCount = Int(readLine()!)
+                        let roomCount = Int(readLine()!)!
                         print("Please Enter Max People Count: ", terminator:"")
-                        let maxPeopleCount = Int(readLine()!)
-                        print("Please Enter Price ")
+                        let maxPeopleCount = Int(readLine()!)!
+                        print("Please Enter Price (Per Person): ", terminator:"")
+                        let perPersonPrice = Float(readLine()!)!
+                        print("Please Enter Total Price: ", terminator:"")
+                        let totalPrice = Float(readLine()!)!
+                        print("Please Enter The Property Type [A/B/C/H]: ")
+                        let propertyType = readLine()!
+                        var tempPropertyType:PropertyType = PropertyType.Apartment
+                        propertytypeloop: while true
+                        {
+                            switch(propertyType)
+                            {
+                            
+                            case "A":
+                                tempPropertyType = PropertyType.Apartment
+                                break propertytypeloop
+                            case "B":
+                                tempPropertyType = PropertyType.Basement
+                                break propertytypeloop
+                            case "C":
+                                tempPropertyType = PropertyType.Condominium
+                                break propertytypeloop
+                            case "H":
+                                tempPropertyType = PropertyType.House
+                                break propertytypeloop
+                            case "exit":
+                                break useridgetter
+                            default:
+                                print("Invalid Property Type. Please Choose from A: Apartment, B: Basement, C: Condominuium, H: House. To cancel anytime type \"exit\".")
+                            }
+                        }
+                        print("Provide Address Details: -> -> ->")
+                        print("Please Enter Street Name With Number (eg. 100 Mornelle Court.): ", terminator: "")
+                        let street = readLine()!
+                        print("Please Enter Apt. Number (Hit Enter to Skip): ", terminator: "")
+                        let aptNo = readLine()
+                        print("Please Enter The City (T/M): ", terminator: "")
+                        let city = readLine()!
+                        var tempCity:City = City.Toronto
+                        cityloop: while true
+                        {
+                            switch(city)
+                            {
+                            case "T":
+                                tempCity = City.Toronto
+                                break cityloop
+                            case "M":
+                                tempCity = City.Montreal
+                                break cityloop
+                            case "exit":
+                                break useridgetter
+                            default:
+                                print("Incorrect City. Please Try with options T: Toronto, M: Montreal. To exit anytime type \"exit\" and hit enter.")
+                            }
+                        }
+                        print("Please Enter The State: ")
+                        let state = readLine()!
+                        print("Please Enter PINCODE: ")
+                        let pincode = readLine()!
+                        let address:Address = Address(city: tempCity, state: state, aptNo: aptNo, pincode: pincode, street: street)
                         
+                        let property:Property = Property(propertyID: "Type Anything as it won't work unless we set importProperty=true", propertyType: tempPropertyType, address: address, totalRooms: roomCount, maxPeopleAllowed: maxPeopleCount, pricePerPerson: perPersonPrice, totalPrice: totalPrice, isAvailable: true)
+                        DataStore.properties.append(property)
                     }
                     else if password == "no password"
                     {
@@ -138,7 +198,7 @@ mainloop: while true
                     }
                     else
                     {
-                        print("Incorrect Password. Please try Again. [Cancel Anytime by just typing \"no password]\"")
+                        print("Incorrect Password. Please try Again. [Cancel Anytime by just typing \"no password\"")
                     }
 
                 }
@@ -157,4 +217,4 @@ mainloop: while true
     
 }
 
-print("Finished")
+print("Thanks for using the command line utility of YourBNB_SWIFT")

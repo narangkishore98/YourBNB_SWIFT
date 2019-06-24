@@ -12,6 +12,4 @@ enum City
 {
     case Toronto
     case Montreal
-    case Edmonton
-    case Vancouver
 }
