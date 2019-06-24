@@ -13,6 +13,7 @@ enum PropertyType
 }
 class Property : Display
 {
+    static var propertyIDGenerator = 1
     var propertyID:String //CXXX or OXXX
     var propertyName:String? //SkyView Manor if appartments not mandatory to give
     var totalRooms:Int //represents number of rooms available in home
@@ -21,6 +22,7 @@ class Property : Display
     var totalPrice:Float // price for the whole property
     var isAvailable:Bool // if the property is available for rent at the current time or not.
     var address:Address
+    var importProperty:Bool = false
     var propertyType:PropertyType
     init(propertyID:String, propertyType:PropertyType, address:Address, totalRooms:Int , maxPeopleAllowed:Int, pricePerPerson:Float, totalPrice:Float, isAvailable:Bool )
     
@@ -33,6 +35,11 @@ class Property : Display
         self.isAvailable = isAvailable
         self.pricePerPerson = pricePerPerson
         self.totalPrice = totalPrice
+        if !importProperty
+        {
+            self.propertyID = "\(Property.propertyIDGenerator)".leftPadding(toLength: 4, withPad: "0")
+            Property.propertyIDGenerator += 1
+        }
     
     }
     init(property:Property)

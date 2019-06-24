@@ -9,6 +9,9 @@
 import Foundation
 class DataStore
 {
+    
+    static var users=Array<User>()
+    static var properties=Array<Property>()
     static func readUsersFromJSON(fileName:String) -> [User]
     {
         let url = Bundle.main.url(forResource: fileName, withExtension: "json")
@@ -32,5 +35,17 @@ class DataStore
         
         
         return Array<User>()
+    }
+    static func getUser(userID:String) -> User?
+    {
+        for user in users
+        {
+            if user.userID == userID
+            {
+                return user
+            }
+            
+        }
+        return nil
     }
 }

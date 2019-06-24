@@ -45,7 +45,7 @@ struct User : Display
         self.password = password
         if !importUser
         {
-            self.userID = "C"+"\(User.userIDGenerator)".padding(toLength: 4, withPad: "0", startingAt:0)
+            self.userID = "C"+"\(User.userIDGenerator)".leftPadding(toLength: 4, withPad: "0")
             User.userIDGenerator += 1
         }
     }

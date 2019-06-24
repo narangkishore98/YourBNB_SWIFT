@@ -9,7 +9,8 @@
 import Foundation
 
 
-var users = Array<User>()
+
+
 
 print("--------------------> Welcome To Your BNB <--------------------")
 print("Note: Choose The Options Below to Cancel anytime just type \"exit\"\nThis is the command line utility for the project YourBNB_Swift availabale at https://www.github.com/narangkishore98/YourBNB_Swift")
@@ -52,6 +53,22 @@ mainloop: while true
             }
             print("------------------------------------------------------")
         }
+    case "2":
+        print("2. View Properties -> -> ->")
+        if properties.count == 0
+        {
+            print("No Properties Available. Please Try adding properties first. Thanks")
+        }
+        else
+        {
+            print("------------------------------------------------------")
+            for property in properties
+            {
+                print("Property Details ----------------------> ")
+                print(property.display())
+            }
+            print("------------------------------------------------------")
+        }
     case "3":
         
         print("3. Add User -> -> -> ")
@@ -89,13 +106,55 @@ mainloop: while true
         print("Please Enter Your Password", terminator:"")
         let password = readLine()!
         let user:User = User(userID: "XXX Fill Aything if you want to add user by your own. you will have to set the importUser = true if you want this from json", firstName: userFirstName, lastName: userLastName, gender: tempGender, email: email, mobile: mobile, password: password)
-        users.append(user)
+        DataStore.users.append(user)
         
         
-        
+    case "4":
+        print("4. Add Property -> -> -> ")
+        useridgetter: while true
+        {
+            print("Please Enter Your User ID: ", terminator:"")
+            let userid = readLine()!
+            if let user = DataStore.getUser(userID: userid)
+            {
+                userpasswordgetter: while true
+                {
+                    print("Please Enter Your Password: ", terminator:"")
+                    let password = readLine()!
+                    if password == user.password
+                    {
+                        print("Please Enter the Property Name: ", terminator:"")
+                        let propertyName = readLine()!
+                        print("Please Enter Room Count: ", terminator:"")
+                        let roomCount = Int(readLine()!)
+                        print("Please Enter Max People Count: ", terminator:"")
+                        let maxPeopleCount = Int(readLine()!)
+                        print("Please Enter Price ")
+                        
+                    }
+                    else if password == "no password"
+                    {
+                        break useridgetter
+                    }
+                    else
+                    {
+                        print("Incorrect Password. Please try Again. [Cancel Anytime by just typing \"no password]\"")
+                    }
+
+                }
+            }
+            else
+            {
+                print("User with \(userid) Does not exist please try agian.")
+            }
+                    
+           
+            
+        }
     default:
         print("This Input Was Invalid Please try agian with the valid input: \"\(firstInput)\"")
     }
+    
 }
 
 print("Finished")
