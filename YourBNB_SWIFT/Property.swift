@@ -73,6 +73,10 @@ class Property : Display
         return returner
         
     }
+    func smallDisplay() -> String
+    {
+        return "ID: \(propertyID) - \(propertyName ?? "") \(address.street) - \(address.city) \(address.state) ($\(totalPrice) "
+    }
     
 }
 
@@ -82,6 +86,7 @@ class BookableProperty : Property
     var checkInDate:Date
     var checkOutDate:Date
     var promoApplied:Bool
+
     var promo:Promo?
     var pricePaid:Float
     init(bookingDate:Date, checkInDate:Date, checkOutDate:Date, promoApplied:Bool, property:Property )
@@ -90,6 +95,7 @@ class BookableProperty : Property
         self.checkInDate = checkInDate
         self.checkOutDate = checkOutDate
         self.promoApplied = promoApplied
+   
         self.pricePaid = promo?.getDiscountedPrice(price: property.totalPrice) ?? property.totalPrice
         super.init(property: property)
     }

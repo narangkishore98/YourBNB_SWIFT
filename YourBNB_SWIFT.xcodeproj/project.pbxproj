@@ -39,14 +39,14 @@
 		};
 		84783F7122C12FFD00A7A05E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
 				84783F7322C1300C00A7A05E /* property.json in CopyFiles */,
 				84783F7222C1300800A7A05E /* users.json in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 

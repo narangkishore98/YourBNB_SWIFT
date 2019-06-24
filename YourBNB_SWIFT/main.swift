@@ -24,10 +24,8 @@ mainloop: while true
     print("3. Add User")
     print("4. Add Property")
     print("5. Book A Property")
-    print("6. Show Future Bookings")
-    print("7. Show Past Bookings")
-    print("8. Read Data From JSON")
-    print("9. Save Data To JSON")
+    print("6. Read Data From JSON")
+    print("7. Save Data To JSON")
     print("\n\nPlease Enter Your Choice: ", terminator: "")
     let firstInput = readLine()!
     
@@ -103,7 +101,7 @@ mainloop: while true
         let email = readLine()!
         print("Please Enter The Mobile Number: ", terminator:"")
         let mobile = Int64(readLine()!)!
-        print("Please Enter Your Password", terminator:"")
+        print("Please Enter Your Password: ", terminator:"")
         let password = readLine()!
         let user:User = User(userID: "XXX Fill Aything if you want to add user by your own. you will have to set the importUser = true if you want this from json", firstName: userFirstName, lastName: userLastName, gender: tempGender, email: email, mobile: mobile, password: password)
         DataStore.users.append(user)
@@ -123,7 +121,7 @@ mainloop: while true
                     let password = readLine()!
                     if password == user.password
                     {
-                        print("Please Enter the Property Name: ", terminator:"")
+                        print("Please Enter the Property Name (Hit enter to leave blank.): ", terminator:"")
                         let propertyName = readLine()!
                         print("Please Enter Room Count: ", terminator:"")
                         let roomCount = Int(readLine()!)!
@@ -133,11 +131,12 @@ mainloop: while true
                         let perPersonPrice = Float(readLine()!)!
                         print("Please Enter Total Price: ", terminator:"")
                         let totalPrice = Float(readLine()!)!
-                        print("Please Enter The Property Type [A/B/C/H]: ")
-                        let propertyType = readLine()!
+                        
                         var tempPropertyType:PropertyType = PropertyType.Apartment
                         propertytypeloop: while true
                         {
+                            print("Please Enter The Property Type [A/B/C/H]: ")
+                            let propertyType = readLine()!
                             switch(propertyType)
                             {
                             
@@ -164,11 +163,12 @@ mainloop: while true
                         let street = readLine()!
                         print("Please Enter Apt. Number (Hit Enter to Skip): ", terminator: "")
                         let aptNo = readLine()
-                        print("Please Enter The City (T/M): ", terminator: "")
-                        let city = readLine()!
+                        
                         var tempCity:City = City.Toronto
                         cityloop: while true
                         {
+                            print("Please Enter The City (T/M): ", terminator: "")
+                            let city = readLine()!
                             switch(city)
                             {
                             case "T":
@@ -190,7 +190,9 @@ mainloop: while true
                         let address:Address = Address(city: tempCity, state: state, aptNo: aptNo, pincode: pincode, street: street)
                         
                         let property:Property = Property(propertyID: "Type Anything as it won't work unless we set importProperty=true", propertyType: tempPropertyType, address: address, totalRooms: roomCount, maxPeopleAllowed: maxPeopleCount, pricePerPerson: perPersonPrice, totalPrice: totalPrice, isAvailable: true)
+                        property.propertyName = propertyName
                         DataStore.properties.append(property)
+                        DataStore.createdBy[userid] = property
                     }
                     else if password == "no password"
                     {
@@ -203,6 +205,10 @@ mainloop: while true
 
                 }
             }
+            else if (userid == "exit")
+            {
+                break useridgetter
+            }
             else
             {
                 print("User with \(userid) Does not exist please try agian.")
@@ -210,6 +216,56 @@ mainloop: while true
                     
            
             
+        }
+    case "5":
+        if DataStore.properties.count ==  0
+        {
+            print("No Properties Available to book.")
+        }
+        else{
+            print("Choose Any of these properties to book.")
+            for property in DataStore.properties
+            {
+                print(property.smallDisplay())
+            }
+            
+            propertybooker : while true{
+                print("--> Please Enter the property ID to book: ", terminator:"")
+                let propertyID = readLine()!
+                if  let property = DataStore.getProperty(propertyID: propertyID)
+                {
+                    print("You are gonna book the following property: ")
+                    print("-------------------------------------------")
+                    print(property.display())
+                    print("Y and Enter to Continute or else N to go for another property.")
+                    choicegetter: while true
+                    {
+                        let choice = readLine()!
+                        switch(choice)
+                        {
+                        case "Y":
+                            print("We Need The User Authentication, Please Enter Your USER ID: ")
+                            usergetter: while true
+                            {
+                                
+                            }
+                        case "N":
+                            print()
+                            break choicegetter
+                        default:
+                            print("Please Choose Y/N: ", terminator:"")
+                            
+                        }
+                    }
+                }
+                else if propertyID == "exit"
+                {
+                    break propertybooker
+                }
+                else{
+                    print("Invalid Property ID. Type exit and hit enter to exit anytime.")
+                }
+            }
         }
     default:
         print("This Input Was Invalid Please try agian with the valid input: \"\(firstInput)\"")
