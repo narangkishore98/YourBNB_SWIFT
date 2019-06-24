@@ -10,7 +10,7 @@ import Foundation
 
 
 
-
+DataStore.readUsersFromJSON(fileName: "users")
 
 print("--------------------> Welcome To Your BNB <--------------------")
 print("Note: Choose The Options Below to Cancel anytime just type \"exit\"\nThis is the command line utility for the project YourBNB_Swift availabale at https://www.github.com/narangkishore98/YourBNB_Swift")
@@ -25,7 +25,6 @@ mainloop: while true
     print("4. Add Property")
     print("5. Book A Property")
     print("6. Read Data From JSON")
-    print("7. Save Data To JSON")
     print("\n\nPlease Enter Your Choice: ", terminator: "")
     let firstInput = readLine()!
     
@@ -247,6 +246,22 @@ mainloop: while true
                             print("We Need The User Authentication, Please Enter Your USER ID: ")
                             usergetter: while true
                             {
+                                print("Please Enter The Valid User ID: ", terminator:"")
+                                let userid = readLine()!
+                                if let user = DataStore.getUser(userID: userid)
+                                {
+                                    passwordgetter: while true
+                                    {
+                                        
+                                    }
+                                }
+                                else if userid == "exit"
+                                {
+                                    break propertybooker
+                                }
+                                else{
+                                    print("Invalid User ID, Press exit to exit anytime.")
+                                }
                                 
                             }
                         case "N":
