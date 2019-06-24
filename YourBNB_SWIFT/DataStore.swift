@@ -167,42 +167,42 @@ class DataStore
                 {
                     if let propertyID = jsonDictionay["propertyID"] as? String
                     {
-                        print(propertyID)
+                        //print(propertyID)
                         property.propertyID = propertyID
                     }
                     if let propertyName = jsonDictionay["propertyName"] as? String
                     {
-                        print(propertyName)
+                        //print(propertyName)
                         property.propertyName = propertyName
                     }
                     if let totalRooms = jsonDictionay["totalRooms"] as? String
                     {
-                        print(totalRooms)
+                        //print(totalRooms)
                         property.totalRooms = Int(totalRooms)!
                     }
                     if let maxPeopleAllowed = jsonDictionay["maxPeopleAllowed"] as? String
                     {
-                        print(maxPeopleAllowed)
+                        //print(maxPeopleAllowed)
                         property.maxPeopleAllowed = Int(maxPeopleAllowed)!
                     }
                     if let pricePerPerson = jsonDictionay["pricePerPerson"] as? String
                     {
-                        print(pricePerPerson)
+                        //print(pricePerPerson)
                         property.pricePerPerson = Float(pricePerPerson)!
                     }
                     if let totalPrice = jsonDictionay["totalPrice"] as? String
                     {
-                        print(totalPrice)
+                        //print(totalPrice)
                         property.totalPrice = Float(totalPrice)!
                     }
                     if let isAvailable = jsonDictionay["isAvailable"] as? Bool
                     {
-                        print(isAvailable)
+                        //print(isAvailable)
                         property.isAvailable = isAvailable
                     }
                     if let propertyType = jsonDictionay["propertyType"] as? PropertyType
                     {
-                        print(propertyType)
+                        //print(propertyType)
                         property.propertyType = propertyType
                     }
                     var address: Address
