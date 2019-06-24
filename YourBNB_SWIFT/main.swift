@@ -10,7 +10,7 @@ import Foundation
 
 
 
-DataStore.readUsersFromJSON(fileName: "users")
+DataStore.readUsersFromJSON(fileName: "property")
 
 print("--------------------> Welcome To Your BNB <--------------------")
 print("Note: Choose The Options Below to Cancel anytime just type \"exit\"\nThis is the command line utility for the project YourBNB_Swift availabale at https://www.github.com/narangkishore98/YourBNB_Swift")
@@ -281,7 +281,7 @@ mainloop: while true
                                             {
                                                 print("Invalid Date Format")
                                             }
-                                            var bookedProperty = BookableProperty(bookingDate: Date(), checkInDate: checkinDate, checkOutDate: checkoutDate, promoApplied: false, property: property)
+                                            let bookedProperty = BookableProperty(bookingDate: Date(), checkInDate: checkinDate, checkOutDate: checkoutDate, promoApplied: false, property: property)
                                             DataStore.bookedBy[userid] = bookedProperty
                                             print("Property Booked" )
                                             break propertybooker

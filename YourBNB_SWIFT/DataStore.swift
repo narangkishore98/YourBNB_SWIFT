@@ -30,6 +30,17 @@ class DataStore
         
         return Array<User>()
     }
+    
+    static func readPropertiesFromJSON(fileName:String)
+    {
+        let url = Bundle.main.url(forResource: fileName, withExtension: "json")
+        guard let jsonData = url else { return }
+        guard let data = try? Data(contentsOf: jsonData) else { return }
+        guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
+        
+        
+        
+    }
     static func getUser(userID:String) -> User?
     {
         for user in users
@@ -54,4 +65,5 @@ class DataStore
         }
         return nil
     }
+
 }
