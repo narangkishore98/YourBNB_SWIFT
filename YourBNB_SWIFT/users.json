@@ -20,7 +20,7 @@
     "email": "nikhilthakur050@gmail.com",
     "mobile": "6477777826",
     "isOwner":"true",
-    "ownedProperties":["C903","C904"],
+    "ownedProperties":["B901","H901"],
     "bookedProperties":
     []
 },
@@ -57,7 +57,7 @@
     "bookedProperties":
     [
         {
-            "propertyID":"C904",
+            "propertyID":"B901",
             "bookingDate": "06-21-2019",
             "checkinDate": "06-23-2019",
             "checkoutDate": "06-25-2019"
