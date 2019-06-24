@@ -10,4 +10,5 @@ import Foundation
 enum AuthorizationError : Error
 {
     case invalidUserType(type:String)
+    case invalidEmailError
 }
