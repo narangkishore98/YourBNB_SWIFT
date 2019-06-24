@@ -75,11 +75,12 @@ mainloop: while true
         let userFirstName = readLine()!
         print("Please Enter Your Last Name: ", terminator:"")
         let userLastName = readLine()!
-        print("Please Select Your Gender (M/F/O): ", terminator:"")
-        let userGender = readLine()!
+        
         var tempGender:Gender = Gender.Other
         genderloop: while true
         {
+            print("Please Select Your Gender (M/F/O): ", terminator:"")
+            let userGender = readLine()!
             switch userGender
             {
                 case "M":
@@ -135,7 +136,7 @@ mainloop: while true
                         var tempPropertyType:PropertyType = PropertyType.Apartment
                         propertytypeloop: while true
                         {
-                            print("Please Enter The Property Type [A/B/C/H]: ")
+                            print("Please Enter The Property Type [A/B/C/H]: ", terminator:"")
                             let propertyType = readLine()!
                             switch(propertyType)
                             {
@@ -183,9 +184,9 @@ mainloop: while true
                                 print("Incorrect City. Please Try with options T: Toronto, M: Montreal. To exit anytime type \"exit\" and hit enter.")
                             }
                         }
-                        print("Please Enter The State: ")
+                        print("Please Enter The State: ", terminator:"")
                         let state = readLine()!
-                        print("Please Enter PINCODE: ")
+                        print("Please Enter PINCODE: ", terminator:"")
                         let pincode = readLine()!
                         let address:Address = Address(city: tempCity, state: state, aptNo: aptNo, pincode: pincode, street: street)
                         
@@ -193,6 +194,7 @@ mainloop: while true
                         property.propertyName = propertyName
                         DataStore.properties.append(property)
                         DataStore.createdBy[userid] = property
+                        break useridgetter
                     }
                     else if password == "no password"
                     {
@@ -253,7 +255,39 @@ mainloop: while true
                                 {
                                     passwordgetter: while true
                                     {
-                                        
+                                        print("Password: ", terminator: "")
+                                        let password = readLine()!
+                                        if password == user.password
+                                        {
+                                            print("Please Enter Checkin Date: (mm-dd-yyyy) ",  terminator: "")
+                                            let checkin = readLine()!
+                                            let df = DateFormatter()
+                                            df.dateFormat = "MM-dd-yyyy"
+                                            let checkinDate:Date
+                                            let checkoutDate:Date
+                                            do{
+                                                 checkinDate =  df.date(from: checkin)!
+                                            }
+                                            catch
+                                            {
+                                                print("Invalid Date Format.")
+                                            }
+                                            print("Please Enter Checkout Date: (mm-dd-yyyy)", terminator: "")
+                                            let checkout = readLine()!
+                                            do
+                                            {
+                                                checkoutDate = df.date(from: checkout)!
+                                            }
+                                            catch
+                                            {
+                                                print("Invalid Date Format")
+                                            }
+                                            var bookedProperty = BookableProperty(bookingDate: Date(), checkInDate: checkinDate, checkOutDate: checkoutDate, promoApplied: false, property: property)
+                                            DataStore.bookedBy[userid] = bookedProperty
+                                            print("Property Booked" )
+                                            break propertybooker
+                                            
+                                        }
                                     }
                                 }
                                 else if userid == "exit"
