@@ -12,7 +12,7 @@ import Foundation
 
 DataStore.readUsersFromJSON(fileName: "property")
 
-/*
+
 print("--------------------> Welcome To Your BNB <--------------------")
 print("Note: Choose The Options Below to Cancel anytime just type \"exit\"\nThis is the command line utility for the project YourBNB_Swift availabale at https://www.github.com/narangkishore98/YourBNB_Swift")
 
@@ -122,6 +122,12 @@ mainloop: while true
                     let password = readLine()!
                     if password == user.password
                     {
+                        if !user.isOwner
+                        {
+                            print("You are not authorized to add the properties.")
+                            break useridgetter
+ 
+                        }
                         print("Please Enter the Property Name (Hit enter to leave blank.): ", terminator:"")
                         let propertyName = readLine()!
                         print("Please Enter Room Count: ", terminator:"")
@@ -317,6 +323,31 @@ mainloop: while true
                 }
             }
         }
+    case "6":
+        DataStore.readPropertiesFromJSON(fileName: "property")
+        DataStore.readUsersFromJSON(fileName: "users")
+    case "7":
+        print("Welcome To Admin Panel")
+  
+            print("Please Enter Admin PAsswrod: ")
+            let passOfAdmin = readLine()!
+            switch(passOfAdmin)
+            {
+            case "admin123":
+                print("Enter User ID to Change to give owner privilages:  ")
+                if var user = DataStore.getUser(userID: readLine()!)
+                {
+                    user.isOwner = true
+                    
+                    print("User set to owner")
+                    
+                }
+                else{
+                    print("User not found")
+                }
+            default:
+                print("Invalid Password")
+            }
     default:
         print("This Input Was Invalid Please try agian with the valid input: \"\(firstInput)\"")
     }
@@ -325,4 +356,4 @@ mainloop: while true
 
 print("Thanks for using the command line utility of YourBNB_SWIFT")
 
- */
+
