@@ -50,7 +50,7 @@ class DataStore
                     }
                     if let gender = jsonDictionay["gender"] as? String
                     {
-                        //print(gender)
+                        //p6rint(gender)
                         let userGender = gender
                         var tempGender:Gender = Gender.Other
                         genderloop: while true
@@ -211,27 +211,27 @@ class DataStore
                         address = Address()
                         if let city = addressDict["city"] as? City
                         {
-                            print(city)
+                            //print(city)
                             address.city = city
                         }
                         if let state = addressDict["state"] as? String
                         {
-                            print(state)
+                            //print(state)
                             address.state = state
                         }
                         if let aptNo = addressDict["aptNo"] as? String
                         {
-                            print(aptNo)
+                            //print(aptNo)
                             address.aptNo = aptNo
                         }
                         if let pincode = addressDict["pincode"] as? String
                         {
-                            print(pincode)
+                            //print(pincode)
                             address.pincode = pincode
                         }
                         if let street = addressDict["street"] as? String
                         {
-                            print(street)
+                            //print(street)
                             address.street = street
                         }
                     property.address = address
