@@ -33,6 +33,16 @@ struct User : Display
     
     // methods and behaviours of the users depend upon the user type and may throw some errors when user type is not compatible
   
+    init()
+    {
+        self.userID = ""
+        self.firstName = ""
+        self.lastName = ""
+        self.gender = Gender.Male
+        self.email = ""
+        self.mobile = 0
+        self.password = ""
+    }
     init(userID:String ,firstName:String, lastName:String, gender : Gender, email:String, mobile:Int64, password:String)
         
     {

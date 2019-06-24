@@ -38,9 +38,9 @@
     [
         {
             "propertyID":"C901",
-            "bookingDate": "20/11/2018",
-            "checkinDate": "23/11/2018",
-            "checkoutDate": "27/11/2018"
+            "bookingDate": "11-20-2018",
+            "checkinDate": "11-23-2018",
+            "checkoutDate": "11-27-2018"
         }
     ]
 },
@@ -58,9 +58,10 @@
     [
         {
             "propertyID":"C904",
-            "bookingDate": "21/06/2019",
-            "checkinDate": "23/06/2019",
-            "checkoutDate": "25/06/2019"
+            "bookingDate": "06-21-2019",
+            "checkinDate": "06-23-2019",
+            "checkoutDate": "06-25-2019"
         }
     ]
 }]
+ 

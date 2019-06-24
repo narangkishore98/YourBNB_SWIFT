@@ -11,6 +11,7 @@ enum PropertyType
 {
     case Apartment, Condominium, House, Basement
 }
+
 class Property : Display
 {
     static var propertyIDGenerator = 1
