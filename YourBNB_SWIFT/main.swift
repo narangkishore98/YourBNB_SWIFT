@@ -325,7 +325,7 @@ mainloop: while true
         }
     case "6":
         DataStore.readPropertiesFromJSON(fileName: "property")
-        //DataStore.readUsersFromJSON(fileName: "users")
+        DataStore.readUsersFromJSON(fileName: "users")
     case "7":
         print("Welcome To Admin Panel")
   
