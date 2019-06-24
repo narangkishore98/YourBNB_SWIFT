@@ -158,6 +158,10 @@ class DataStore
         
         
     }
+    func readPropertiesFromJSON(fileName:String)
+    {
+        
+    }
     static func getUser(userID:String) -> User?
     {
         for user in users
